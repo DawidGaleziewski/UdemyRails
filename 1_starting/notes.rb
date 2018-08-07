@@ -191,4 +191,23 @@ git commit -m "Create rails app, inital commit" #-m stands for msg
 git status - check what was broken
 
 #to undo the changes
-git checkout -f
+git checkout -f #this will restore broken folders
+
+
+##connecting to github
+#link cloud9 with github so that we don't need password
+copy the ssh:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDMxHMLYV0h3OsErPz1EL8VomM2BMhMriNZCrH/OKkKiyuCNOtRUT8AX+Aw1xFQlJUX8Yj5SXNbRue0drcZC3i1tdJSx8Bsd4AQPVpo/WGrcn/5QesMOwePeQr45pwJ1ULYOQQ43DmtVShLAabbh1itKxIbPMHeuzRJ5+q2BpZJ5vGLReIOQEa6urf74NGHPlLGwFRY4AhViueRv7T393kJVLuJFw3JH/84ZdkzvG+dIwMxx4c6lQee6PXfjtaIyGbPe1nb43mhDdHQEceLro6t/JozRPsqaTDWNIs3813eq3208goaL/scnpWLoicJ8OA5JeUoJ3+7VHb+YVgP5ztyxPGCG/z+0ohyJ4Da9MFKcxYDRSsw8AjQxLMxitrrU1dSXKPUJ5stWG+l5WH/HFebkboEayKfIbHfsWaGhIhEO3eeTV80QZZc/GH/b4CiU5EKnFy6nqk9AdeI5CoO44oys3BbHp0xfeXydRF63+0mAqP/zw2Ahv520HF4b/Hj9Ok1iZ2OrITFuTWA7yt3ERqbXsr0RojYEP6BUkG/KFszuYLu5XZO+9w+X/lF67030pXd7mcQxD2vjER3GyhI7kNStqZx+hVS4CnWmeYs398IFXtsDWdmPFrVwPeT7/5joNoXsFBAG6peHNEO8K+Wi0ahQiwNu39z7lBesxTijVXj9Q== f03a2edeacf84f21be43a62a805db4d6@cloud9.amazon.com
+
+#go to github accoun and in account settings go to ssh key settings
+# get the ssh for the repo on git:
+git@github.com:DawidGaleziewski/AWSUdemyRuby.git
+
+#add origin to the repo: #that is repo online connected to the repo!!
+git remote add origin git@github.com:DawidGaleziewski/AWSUdemyRuby.git
+
+#check if this was added correctly by:
+git remote -v
+
+#push to github!:
+git push -u origin master
